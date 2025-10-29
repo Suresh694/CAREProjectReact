@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-export default function LoginScreen({onLogin, initialName='Agent'}){
-  const [name, setName] = useState(initialName)
+export default function LoginScreen({onLogin}){
+  // start with an empty name so the input only shows the placeholder
+  const [name, setName] = useState('')
   const [password, setPassword] = useState('')
 
   function submit(e){
